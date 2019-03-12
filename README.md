@@ -23,7 +23,7 @@ More details regarding the app are described in the [manuscript](https://github.
 
 ## Getting Started
 
-The app is hosted on the website: https://szenitha.shinyapps.io/shiny-seq3/
+The app is hosted on the website: https://ulas.shinyapps.io/Shiny-Seq/
 
 To run this app locally on your machine, download R or RStudio and run the following commands once to set up the environment:
 
@@ -55,4 +55,3 @@ Due to memory constrains the features WGCNA, enrichment of GO terms and generati
 
 ## License
 See the [LICENSE](https://github.com/szenitha/Shiny-Seq/blob/master/LICENSE.txt) file for license rights and limitations.
-
