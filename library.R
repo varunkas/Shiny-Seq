@@ -1,5 +1,8 @@
 #devtools packages
 
+options(repos = BiocInstaller::biocinstallRepos())
+getOption("repos")
+
 list.of.dev.packages <- c("plotly",
                           "crosstalk",
                           "DT")
@@ -136,8 +139,8 @@ list.of.bioc.packages<- c("rhdf5",
 
 new.packages.bioc <- list.of.bioc.packages[!(list.of.bioc.packages %in% installed.packages()[,"Package"])]
 
-source("https://bioconductor.org/biocLite.R")
-if(length(new.packages.bioc)>0) biocLite(new.packages.bioc,suppressUpdates=TRUE)
+install.packages("BiocManager")
+if(length(new.packages.bioc)>0) BiocManager::install(new.packages.bioc,suppressUpdates=TRUE)
 
 lapply(c(list.of.dev.packages,list.of.packages,list.of.bioc.packages), require, character.only = TRUE)
 
