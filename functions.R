@@ -494,12 +494,14 @@ get_pheno<-function(data,pheno)
 #if Kegg anallysis is performed the enrichKegg function is called and its o/p is returned
 enrichment_function<-function(enrichment_type,enrichment_input)
 {
+  
   obj<-NULL
     if(enrichment_type=="kegg")
     {
       obj<-enrichKEGG(gene         = enrichment_input[[1]],
                       organism     = enrichment_input[[2]],
-                       pvalueCutoff = 1)
+                      pAdjustMethod = "BH",
+                      qvalueCutoff = 0.2)
     }
     else if(enrichment_type=="biological process")
     {
@@ -508,8 +510,7 @@ enrichment_function<-function(enrichment_type,enrichment_input)
                OrgDb         = enrichment_input[[3]],
                ont           = "BP",
                pAdjustMethod = "BH",
-               pvalueCutoff  = 1,
-               qvalueCutoff  = 1, 
+               qvalueCutoff  = 0.2, 
                readable      = TRUE)
       
     }
@@ -519,21 +520,12 @@ enrichment_function<-function(enrichment_type,enrichment_input)
       obj<-enricher(enrichment_input[[1]],
                     TERM2GENE = enrichment_input[[2]],#c1_hallmark,
                     universe  = enrichment_input[[3]],
-                    pvalueCutoff = 1,
-                    #pAdjustMethod = "none",
-                    qvalueCutoff = 1)
+                    pAdjustMethod = "BH",
+                    qvalueCutoff = 0.2)
     }
     
 }
 
-
-#enrichment (result=DE_genes(),
-             #organism=input$organism, 
-             #dds.fc=batch_design()[[1]]
-            #num<- length(input$combination),
-            #wgcna_modules<-wgcna_output()$modules)
-# WGCNA_matrix<-wgcna()[[2]]
-# mod<- heat_wgcna()[[1]]
 
 enrichment_main<-function(enrichment_type,result,input_organism,dds.fc,num,mod,WGCNA_matrix,c1_hallmark)
 {
