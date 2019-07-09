@@ -21,7 +21,7 @@ Shiny-Seq is a comprehensive application tool that comprises of carefully chosen
 
 ## Getting Started
 
-The app is hosted on the website: https://ulas.shinyapps.io/Shiny-Seq/
+The app is hosted on the website: https://schultzelab.shinyapps.io/Shiny-Seq/
 
 After setting up the environment, download the [App folder](https://github.com/UlasThomas/Shiny-Seq/tree/master). Open [App.r](https://github.com/UlasThomas/Shiny-Seq/master/app.R) file and execute it as a shiny app. Kindly refer to the screenshot below.
 
