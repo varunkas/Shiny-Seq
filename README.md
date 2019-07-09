@@ -28,10 +28,6 @@ After setting up the environment, download the [App folder](https://github.com/U
 An example dataset has been provided for use in addition to a protocol to explain the various steps involved in doing the RNA-Seq data
 analysis and demonstrate how the application helps to do an end to end analysis to derive useful insights.
 
-## Limitation
-
-Due to memory constrains the features WGCNA, enrichment of GO terms and generation of PowerPoint presentation cannot be supported by the application hosted on the public website shinyapps.io server https://szenitha.shinyapps.io/shiny-seq3/. With funding the memory limitation can be increased. Currently 1GB of memory can only be accessed. However users can host the application in their own servers. The application has been tested to do well on chrome and firefox browsers.
- 
 
 ## License
 See the [LICENSE](https://github.com/szenitha/Shiny-Seq/blob/master/LICENSE.txt) file for license rights and limitations.
