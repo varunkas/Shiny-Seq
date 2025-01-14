@@ -139,7 +139,6 @@ list.of.bioc.packages<- c("rhdf5",
 
 new.packages.bioc <- list.of.bioc.packages[!(list.of.bioc.packages %in% installed.packages()[,"Package"])]
 
-install.packages("BiocManager")
 if(length(new.packages.bioc)>0) BiocManager::install(new.packages.bioc,suppressUpdates=TRUE)
 
 lapply(c(list.of.dev.packages,list.of.packages,list.of.bioc.packages), require, character.only = TRUE)
